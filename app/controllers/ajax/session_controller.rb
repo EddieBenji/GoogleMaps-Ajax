@@ -18,7 +18,7 @@ class Ajax::SessionController < ApplicationController
 
   def logout
     session.delete(:registration_number)
-    render json: {session_deleted: 'session_deleted'}
+    render json: {msg: 'Haz salido de la sesión'}
   end
 
   def index

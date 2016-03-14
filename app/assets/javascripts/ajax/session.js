@@ -138,3 +138,18 @@ function deleteStudent() {
         alert("Escriba un ID");
     }
 }
+
+function closeSession(){
+    $.ajax({
+        url: '/ajax/logout',
+        type: "delete",
+        dataType: 'json',
+        success: function (result) {
+            window.sessionStorage.setItem('session_started', 'n');
+            alert(result.msg);
+            $('#crud-students').hide();
+            $('#init-session').show();
+            $('#login-form')[0].reset();
+        }
+    });
+}
