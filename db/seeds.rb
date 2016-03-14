@@ -32,8 +32,9 @@ Student.create(registration_number: '11216376', name: 'José Luis',
 Student.create(registration_number: '13176309', name: 'Irving Rafael',
                first_last_name: 'Che', second_last_name: 'Chan', age: 21,
                street: '48', crossings: '143 y 145', number: 836,
-               suburb: 'Sn. José Tecoh', postal_code: '97299', latitude: '20
-.68066', altitude: '-89.6248113', password: 'irving')
+               suburb: 'Sn. José Tecoh', postal_code: '97299',
+               latitude: '20.68066', altitude: '-89.6248113',
+               password: 'irving')
 
 Student.create(registration_number: '10003796', name: 'José Fernando',
                first_last_name: 'Quiñones', second_last_name: 'Tun', age: 21,
@@ -63,6 +64,35 @@ Student.create(registration_number: '13116356', name: 'André',
                latitude: '21.279752', altitude: '-89.688529',
                password: 'andre')
 
+Student.create(registration_number: '13116339', name: 'Edwin Julián',
+               first_last_name: 'González', second_last_name: 'Correa',
+               age: 20, street: '46', crossings: '125a y 125b', number: 528,
+               suburb: 'Amp Hda.', postal_code: '97289',
+               latitude: '20.930819', altitude: '-89.613564',
+               password: 'edwin')
+
+Student.create(registration_number: '13116349', name: 'Esteban Arseño',
+               first_last_name: 'Kuh', second_last_name: 'May',
+               age: 20, street: '129', crossings: '88 y 90', number: 716,
+               suburb: 'Emiliano Zapata', postal_code: '97297',
+               latitude: '20.92934', altitude: '-89.645857',
+               password: 'estebanarseño')
+
+Student.create(registration_number: '10003337', name: 'Antonio',
+               first_last_name: 'Alonzo', second_last_name: 'Cortazar',
+               age: 20, street: '66', crossings: '55 y 57', number: 481,
+               suburb: 'Centro', postal_code: '97000',
+               latitude: '20.970806', altitude: '-89.626506',
+               password: 'antonio')
+
+Student.create(registration_number: '09001540', name: 'Josafat',
+               first_last_name: 'Padilla', second_last_name: 'Chi',
+               age: 21, street: '41', crossings: '24 y 26', number: 315,
+               suburb: 'Juan pablo II', postal_code: '97246',
+               latitude: '20.968052', altitude: '-89.678824',
+               password: 'josafat')
+
+
 Student.create(registration_number: '10216376', name: 'Javier',
                first_last_name: 'Mijangos', second_last_name: 'Saucedo', age:
                    24,
@@ -70,7 +100,7 @@ Student.create(registration_number: '10216376', name: 'Javier',
                    'Mulsay', postal_code: '92647', latitude: '20.9726563',
                altitude: '-89.6716562', password: 'javier')
 
-Student.create(registration_number: '09000856', name: 'Eduardo',
+Student.create(registration_number: '09000856', name: 'Lalo',
                first_last_name: 'Canché', second_last_name: 'Vázquez', age: 22,
                street: '27a', crossings: '10B y 10C', number: 258, suburb:
                    'Vergel 2', postal_code: '97173', latitude: '20.9495887',
