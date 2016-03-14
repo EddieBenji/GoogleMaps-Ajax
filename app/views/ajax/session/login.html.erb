@@ -1,0 +1,118 @@
+<div id="init-session">
+  <h1>Bienvenido al sistema de Eduardo</h1>
+  <h3>Inicia sesión</h3>
+  <%= form_tag('#', :method => 'post', id: 'login-form',
+               html: {class: 'form-horizontal'}) do %>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="col-md-2">
+            <%= label_tag 'Matrícula:' %>
+          </div>
+          <div class="col-md-10">
+            <%= text_field_tag :registration_number, params[:registration_number],
+                               class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="col-md-2">
+            <%= label_tag 'Contraseña: ' %>
+          </div>
+          <div class="col-md-10">
+            <%= password_field :password, params[:password], class:
+                'form-control' %>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+          <%= button_tag type: 'button', class: 'btn btn-primary',
+                         id: 'btn-login' do %>
+              Inicia sesión
+              <i class="fa fa-sign-in"></i>
+          <% end %>
+        </div>
+      </div>
+  <% end %>
+</div>
+
+<div id="crud-students">
+  <h2 id="title-students">Gestión de alumnos</h2>
+  <div id="tabs">
+    <ul>
+      <li><a href="#new-student">Altas</a></li>
+      <li><a href="#show-student">Consultas</a></li>
+      <li><a href="#update-student">Modificaciones</a></li>
+      <li><a href="#delete-student">Bajas</a></li>
+    </ul>
+    <div id="new-student">
+      <h1>Agregando un estudiante</h1>
+      <form action="#" id="add-new-student">
+        <%= render 'form' %>
+        <br>
+        <button class="btn btn-primary col-md-offset-5">
+          Agregar <i class="fa fa-plus"></i>
+        </button>
+      </form>
+    </div>
+    <div id="show-student">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="student-id">Escribe el id del estudiante</label>
+        </div>
+        <div class="col-md-8">
+          <input type="number" id="student-id">
+          <button onclick="searchStudent();" class="btn btn-primary">Buscar
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <br><br>
+      <div class="row" id="student-data" style="display: none;">
+        <%= render 'view_student' %>
+      </div>
+    </div>
+    <div id="update-student">
+      <h1>Actualizando un estudiante</h1>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="student-form-id">Escriba el id del estudiante</label>
+        </div>
+        <div class="col-md-6">
+          <input type="number" id="student-form-id" required>
+        </div>
+      </div>
+      <%= render 'update_form' %>
+      <br>
+      <button class="btn btn-primary col-md-offset-5"
+              onclick="updateStudentForm();">
+        Actualizar <i class="fa fa-pencil-square-o"></i>
+      </button>
+    </div>
+    <div id="delete-student">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="student-delete-id">Escriba el id del estudiante a
+            eliminar</label>
+        </div>
+        <div class="col-md-4">
+          <input type="number" id="student-delete-id" required>
+        </div>
+        <div class="col-md-4">
+          <button onclick="deleteStudent();" class="btn btn-primary">
+            Eliminar <i class="fa fa-trash-o"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <%= link_to ajax_google_maps_path, class: 'btn btn-danger',
+              target: '_blank' do %>
+      Ver Mapa
+      <i class="fa fa-globe"></i>
+  <% end %>
+
+</div>

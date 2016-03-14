@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @zombie.name %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @zombie.bio %>
+</p>
+
+<div id="field-custom-email" style="display: none">
+  <strong>Custom email</strong>
+  <!--We want update this span with ajax-->
+  <span id="email"><%= @zombie.email %></span>
+</div>
+<br>
+<div id="custom_email">
+  <%= form_for @zombie, url: custom_email_zombie_path(@zombie),
+               remote: true do |f| %>
+  <strong>Email</strong>
+      <%= f.text_field :email %>
+      <%= f.submit 'Set' %>
+  <% end %>
+</div>
+
+<!--<div id="custom-email-JSON">-->
+  <!--<%= form_for @zombie, url: custom_email_zombie_path(@zombie) do |f| %>-->
+      <!--<strong>Email Via JSON</strong>-->
+      <!--<%= f.text_field :email %>-->
+      <!--<%= f.submit 'Set' %>-->
+  <!--<% end %>-->
+<!--</div>-->
+
+<%= link_to 'Edit', edit_zombie_path(@zombie) %> |
+<%= link_to 'Back', zombies_path %>

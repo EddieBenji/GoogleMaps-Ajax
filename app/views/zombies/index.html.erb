@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'Login', ajax_login_path, method: :get %>
+<h1>Listing Zombies</h1>
+
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Bio</th>
+    <th>Flavor Brain</th>
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody id="zombies">
+  <% @zombies.each do |zombie| %>
+      <%= render 'zombie', zombie: zombie %>
+  <% end %>
+  </tbody>
+</table>
+
+<br><br>
+<h2>Creating a new zombie</h2>
+<%= form_for(Zombie.new, remote: true) do |f| %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <%= f.label :bio %>
+      <%= f.text_area :bio %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>
+<br>
+
+<!--<%= link_to 'New Zombie', new_zombie_path %>-->

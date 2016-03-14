@@ -1,0 +1,2 @@
+module Ajax::StudentsHelper
+end

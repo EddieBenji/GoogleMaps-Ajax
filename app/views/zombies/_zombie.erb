@@ -1,0 +1,13 @@
+<tr id="zombie_<%= zombie.id %>">
+  <td><%= zombie.name %></td>
+  <td><%= zombie.bio %></td>
+  <td><%= zombie.brain.flavor %></td>
+  <td><%= link_to 'Show', zombie %></td>
+  <td><%= link_to 'Edit', edit_zombie_path(zombie) %></td>
+  <td><%= link_to 'Destroy', zombie, method: :delete, data:
+      {
+          # confirm: 'Are you sure?',
+          remote: true
+      } %>
+  </td>
+</tr>
