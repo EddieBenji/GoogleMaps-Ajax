@@ -23,8 +23,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'twitter-bootstrap-rails'
-gem 'underscore-rails'
-gem 'gmaps4rails'
+gem 'underscore-rails', '1.8.3'
+gem 'gmaps4rails', '2.1.2'
+gem 'ransack', '1.7.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
