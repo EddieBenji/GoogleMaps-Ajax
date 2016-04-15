@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     patch :custom_email, on: :member
     post :search, on: :collection
   end
+  root 'zombies#index'
 
 
 
@@ -18,5 +19,5 @@ Rails.application.routes.draw do
     get 'google_maps' => 'students#show_map', as: 'google_maps'
 
   end
-  root 'ajax/session#login'
+  # root 'ajax/session#login'
 end
